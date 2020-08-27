@@ -4,109 +4,83 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>CN Unit2</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
-        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body class="modal-open">
     <div class="panel panel-default">
-        <div class="panel-heading" id="main-board-categories" style="background-color: black;">
-            <div class="category col-md-2">
-                <div class="text-center well">
-                    <div class="category-title category-text text-center" style="height: 409px; width: 270px;">
-                        ROBOTS</div>
-                </div>
-                <div class="clearfix"></div>
+        <div class="panel-heading" id="categories">
+            <div class="category">
+                <div class="category-title">ROBOTS</div>
             </div>
-            <div class="category col-md-2">
-                <div class="text-center well">
-                    <div class="category-title category-text text-center" style="height: 409px; width: 270px;">
-                        NICKNAMES</div>
-                </div>
-                <div class="clearfix"></div>
+            <div class="category">
+                <div class="category-title">NICKNAMES</div>
             </div>
-            <div class="category col-md-2">
-                <div class="text-center well">
-                    <div class="category-title category-text text-center" style="height: 409px; width: 270px;">
-                        FAMOUS FIRST WORDS</div>
-                </div>
-                <div class="clearfix"></div>
+            <div class="category">
+                <div class="category-title">
+                    FAMOUS FIRST WORDS</div>
             </div>
-            <div class="category col-md-2">
-                <div class="text-center well">
-                    <div class="category-title category-text text-center" style="height: 409px; width: 270px;">GOING
-                        "DARK"</div>
-                </div>
-                <div class="clearfix"></div>
+            <div class="category">
+                <div class="category-title">GOING
+                    "DARK"</div>
             </div>
-            <div class="category col-md-2">
-                <div class="text-center well">
-                    <div class="category-title category-text text-center" style="height: 409px; width: 270px;">
-                        FICTIONAL COMPANIES</div>
-                </div>
-                <div class="clearfix"></div>
+            <div class="category">
+                <div class="category-title">
+                    FICTIONAL COMPANIES</div>
             </div>
-            <div class="category col-md-2">
-                <div class="text-center well">
-                    <div class="category-title category-text text-center" style="height: 409px; width: 270px;">
-                        PAINFULLY OBVIOUS</div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-
-        <div class="panel-body" id="main-board" style="background-color: black;">
-            <div class="category col-md-2" id="cat-0" data-category="0">
-                <div class="well question unanswered text-center" data-question="0">$100</div>
-                <div class="well question unanswered text-center" data-question="1">$200</div>
-                <div class="well question unanswered text-center" data-question="2">$300</div>
-                <div class="well question unanswered text-center" data-question="3">$400</div>
-                <div class="well question unanswered text-center" data-question="4">$500</div>
-            </div>
-            <div class="category col-md-2" id="cat-1" data-category="1">
-                <div class="well question unanswered text-center" data-question="0">$100</div>
-                <div class="well question unanswered text-center" data-question="1">$200</div>
-                <div class="well question unanswered text-center" data-question="2">$300</div>
-                <div class="well question unanswered text-center" data-question="3">$400</div>
-                <div class="well question unanswered text-center" data-question="4">$500</div>
-            </div>
-            <div class="category col-md-2" id="cat-2" data-category="2">
-                <div class="well question unanswered text-center" data-question="0">$100</div>
-                <div class="well question unanswered text-center" data-question="1">$200</div>
-                <div class="well question unanswered text-center" data-question="2">$300</div>
-                <div class="well question unanswered text-center" data-question="3">$400</div>
-                <div class="well question unanswered text-center" data-question="4">$500</div>
-            </div>
-            <div class="category col-md-2" id="cat-3" data-category="3">
-                <div class="well question unanswered text-center" data-question="0">$100</div>
-                <div class="well question unanswered text-center" data-question="1">$200</div>
-                <div class="well question unanswered text-center" data-question="2">$300</div>
-                <div class="well question unanswered text-center" data-question="3">$400</div>
-                <div class="well question unanswered text-center" data-question="4">$500</div>
-            </div>
-            <div class="category col-md-2" id="cat-4" data-category="4">
-                <div class="well question unanswered text-center" data-question="0">$100</div>
-                <div class="well question unanswered text-center" data-question="1">$200</div>
-                <div class="well question unanswered text-center" data-question="2">$300</div>
-                <div class="well question unanswered text-center" data-question="3">$400</div>
-                <div class="well question unanswered text-center" data-question="4">$500</div>
-            </div>
-            <div class="category col-md-2" id="cat-5" data-category="5">
-                <div class="well question unanswered text-center" data-question="0">$100</div>
-                <div class="well question unanswered text-center" data-question="1">$200</div>
-                <div class="well question unanswered text-center" data-question="2">$300</div>
-                <div class="well question unanswered text-center" data-question="3">$400</div>
-                <div class="well question unanswered text-center" data-question="4">$500</div>
+            <div class="category">
+                <div class="category-title">
+                    PAINFULLY OBVIOUS</div>
             </div>
         </div>
 
+        <div class="panel-body" id="main-board">
+            <div class="category">
+                <div class="question">$100</div>
+                <div class="question">$200</div>
+                <div class="question">$300</div>
+                <div class="question">$400</div>
+                <div class="question">$500</div>
+            </div>
+            <div class="category">
+                <div class="question">$100</div>
+                <div class="question">$200</div>
+                <div class="question">$300</div>
+                <div class="question">$400</div>
+                <div class="question">$500</div>
+            </div>
+            <div class="category">
+                <div class="question">$100</div>
+                <div class="question">$200</div>
+                <div class="question">$300</div>
+                <div class="question">$400</div>
+                <div class="question">$500</div>
+            </div>
+            <div class="category">
+                <div class="question">$100</div>
+                <div class="question">$200</div>
+                <div class="question">$300</div>
+                <div class="question">$400</div>
+                <div class="question">$500</div>
+            </div>
+            <div class="category">
+                <div class="question">$100</div>
+                <div class="question">$200</div>
+                <div class="question">$300</div>
+                <div class="question">$400</div>
+                <div class="question">$500</div>
+            </div>
+            <div class="category">
+                <div class="question">$100</div>
+                <div class="question">$200</div>
+                <div class="question">$300</div>
+                <div class="question">$400</div>
+                <div class="question">$500</div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
