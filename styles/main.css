@@ -1,18 +1,18 @@
 body {
-	background-color: navy;
-	color: white;
+    background-color: navy;
+    color: white;
 }
 
-#main-board {
-	background-image: none;
+#questions {
+    background-image: none;
     background-color: black;
     padding: 15px;
 }
 
-#categories{
-	background-image: none;
-	background-color: black;
-	border: none;
+#categories {
+    background-image: none;
+    background-color: black;
+    border: none;
     color: white;
     padding: 10px 15px;
     border-bottom: 1px solid transparent;
@@ -21,7 +21,7 @@ body {
 }
 
 .category {
-	padding-left: 5px;
+    padding-left: 5px;
     padding-right: 5px;
     margin-bottom: 20px;
     text-align: center;
@@ -29,33 +29,42 @@ body {
     float: left;
 }
 
-.category-title {
-	background-image: none;
-	border: none;
+.questions-column {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 16.66666667%;
+    float: left;
+}
+
+.category-cell {
+    background-image: none;
+    border: none;
     display: table-cell;
     vertical-align: middle;
     position: relative;
     text-align: center;
     font-size: 24px;
-	font-family: Helvetica;
+    font-family: Helvetica;
     font-weight: bold;
     background-image: none;
-	background-color: navy;
-	border: none;
-	margin-bottom: 10px;
+    background-color: navy;
+    border: none;
+    margin-bottom: 10px;
     padding: 3px;
     min-height: 20px;
     box-sizing: border-box;
 }
 
-.question {
-	color: goldenrod;
-	font-size: 60px;
-    font-family: Impact;	
+.question-cell {
+    color: goldenrod;
+    font-size: 60px;
+    font-family: Impact;
     background-image: none;
-	background-color: navy;
-	border: none;
-	margin-bottom: 10px;
+    background-color: navy;
+    border: none;
+    margin-bottom: 10px;
     padding: 3px;
     min-height: 20px;
 }
