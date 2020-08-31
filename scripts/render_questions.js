@@ -6,6 +6,7 @@ let questionValues = [100, 200, 300, 400, 500];
  *
  * 1. Loop over each category.
  *      HINT: Loop from 0 till numCategories using a for loop.
+ *      Need more help? Check out https://mzl.la/2YSY7ud or ask a volunteer.
  * 
  * 2. Inside the category loop, loop over the `questionValues` array.
  *      HINT: Use a for/of loop 
