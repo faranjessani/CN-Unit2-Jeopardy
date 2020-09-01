@@ -10,4 +10,5 @@ $(function() {
     renderCategories();
     renderQuestions();
     resizeFunction();
+    my_onclick(questions[0]);
 });
