@@ -22,14 +22,16 @@ let questionValues = [100, 200, 300, 400, 500];
  *      Need more help? Check out https://bit.ly/2EIsD3b or ask a volunteer.
  * 
  * 5. Use jQUery's append function to add your HTML string to the #questions div.
- *      HINT: Use $(tag).append(html);
+ *      HINT: Use $(selector).append(html);
  *      Need more help? Check out https://api.jquery.com/append/ or ask a volunteer.
+ * 
+ * 6. TODO(faranjessani): Add an instruction for the data-category attribute.
  */
 function renderQuestions() {
     for (let i = 0; i < numCategories; i++) {
         let questionHtml = "<div class='questions-column'>";
         for (let questionValue of questionValues) {
-            questionHtml += "<div class='question-cell'>$" + questionValue + "</div>";
+            questionHtml += "<div class='question-cell' data-category='" + i + "'>$" + questionValue + "</div>";
         }
         questionHtml += "</div>";
         $("#questions").append(questionHtml);

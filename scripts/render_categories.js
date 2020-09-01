@@ -24,7 +24,8 @@ let categories = [
  *      Need more help? Check out https://bit.ly/2EIsD3b or ask a volunteer.
  * 
  * 4. Use jQUery's append function to add your HTML string to the #categories div.
- *      HINT: https://api.jquery.com/append/
+ *      HINT: Use $(selector).append(html);
+ *      Need more help? Check out https://api.jquery.com/append/ or ask a volunteer.
  *
  * BONUS: Make all the category names UPPERCASE.
  *      HINT: Use the toUpperCase() function.
