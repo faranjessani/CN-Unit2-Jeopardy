@@ -73,10 +73,13 @@ body {
 
 #question-modal {
     display: none;
+    width: 100vw;
+	height: 100vh;
+	padding: 0;
 }
 
 #question-modal .button {
-    background-color: #4CAF50; /* Green */
+  background-color: #4CAF50; /* Green */
   border: none;
   color: blue;
   padding: 15px 32px;
@@ -84,4 +87,13 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+#question-modal-content {
+    height: 100vh;
+    background-color: navy;
+}
+
+#question-modal-text {
+    height: 625px;
 }
