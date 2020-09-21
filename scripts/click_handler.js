@@ -1,43 +1,57 @@
-// Instructions:
-// #1: Read through the helper functions you have below.  Make sure you are familiar with
-// what they do, you will need to use them later.
-//
-// #2: It looks like someone forgot to add a click handler to the jeopardy boxes!
-// Check out line 80, which says "add click handler to display question".
-// Call the show_question_onclick helper function here to display the question.
-//
-// #3: INCREMENTAL DEVELOPMENT.  Check to make sure that your code change works.
-// Click on a box on the jeopardy board.  If you see a pop up with the question,
-// category, and $ amount, then you're ready to move on to step 4.
-//
-// #4: Oh no!  It looks like the previous engineer also forgot to add a click handler
-// for displaying the answer in the jeopardy box.  Check out line 49, and replace the
-// console.log with the helper function that displays the answer.  It's up to you to
-// identify the correct helper function.
-//
-// #5: INCREMENTAL DEVELOPMENT.  Check to make sure that your code change works.
-// Click a square on the jeopardy board to bring up a question, then click "show answer".
-// If you see the answer is displayed, then you're ready to move on.
-//
-// #6: Challenge!!!!! Click on a square on the jeopardy board.  Notice how the "close" button
-// doesn't work!
-// #7: Read through the code and identify where the click handler is added to the close button.
-// #8: Call the appropriate helper function in the close button's click handler.
+/* TODO: Program the following: 
+ *  Finish each helper function below.
+ *
+ * 1. Finish attachClickHandlers().
+ *      HINT: It looks like someone forgot to add a click handler to the Jeopardy questions!
+ *
+ * 2. Check to make sure that your code change works.
+ *      HINT: Launch the game and click on a question. If you see a pop-up with the question, category and value, then it worked! 
+ *            Your screen should look like {LINK}.
+ *      Need more help? Ask a volunteer.
+ * 
+ * 3. Finish show_question_onclick().
+ *      HINT: It looks like the previous engineer also forgot to add a click handler for displaying the answer in the jeopardy box.
+ * 
+ * 4. Check to make sure that your code change works.
+ *      HINT: Launch the game and click on a question. Then click on "show answer". If the answer is displayed, then it worked! 
+ *            Your screen should look like {LINK}.
+ *      Need more help? Ask a volunteer.
+ * 
+ * 5. Challenge!!!!! Fix the "close" button.
+ *      HINT: Read through the code and identify where the click handler is added to the close button.
+ * 
+ * 6. Check to make sure that your code change works.
+ *      HINT: Launch the game and click on a question, click on "show answer" and finally click on "close".
+ *            If the popup closes correctly, then it worked!
+ *      Need more help? Ask a volunteer.
+ */
 
-// This helper function uses the categoryIndex and moneyValue to return the question.
-// TODO(volunteers)(remove the placeholder logic once questions are actually set up)
-function getQuestion(categoryIndex, moneyValue) {
-  return (
-    (questions_by_category[categoryIndex] &&
-      questions_by_category[categoryIndex][moneyValue]) || {
-      question_text: "Question text placeholder",
-      answer_text: "Answer text placeholder"
-    }
-  );
+/* TODO: Program the following:
+*   Attach a click handler to each question on the Jeopardy board.
+*
+* 1. Call the show_question_onclick helper function when $(questionElement) is clicked.
+*      HINT: The show_question_onclick takes two parameters. 
+*      Find out which ones by looking at the function.
+*      Need more help? Check out https://bit.ly/2RP3RBg or ask a volunteer.
+*/
+function attachClickHandlers() {
+  $(".question-cell").each((index, questionElement) => {
+    // categoryIndex is used to look up the jeopardy question for this element.
+    let categoryIndex = $(questionElement).attr("data-category");
+    let moneyValue = $(questionElement).text().replace("$", "");
+    $(questionElement).click(() => {
+      show_question_onclick(categoryIndex, moneyValue);
+    });
+  });
 }
 
-// Displays a jeopardy question.  Uses categoryIndex and question value to
-// pick the correct question.
+/* TODO: Program the following:
+*   Populate the question modal with data for the appropriate question.
+*
+* 1. Replace the console.log with the helper function that displays the answer.
+*      HINT: One of the helper methods in this file displays the answer. Find it!
+*      Need more help? Ask a volunteer.
+*/
 function show_question_onclick(categoryIndex, questionValue) {
   let question = getQuestion(categoryIndex, questionValue);
   $("#question-modal-title").html(
@@ -56,6 +70,18 @@ function show_question_onclick(categoryIndex, questionValue) {
   $("#question-modal").modal("show");
 }
 
+// This helper function uses the categoryIndex and moneyValue to return the question.
+// TODO(volunteers)(remove the placeholder logic once questions are actually set up)
+function getQuestion(categoryIndex, moneyValue) {
+  return (
+    (questions_by_category[categoryIndex] &&
+      questions_by_category[categoryIndex][moneyValue]) || {
+      question_text: "Question text placeholder",
+      answer_text: "Answer text placeholder"
+    }
+  );
+}
+
 // Hides the quesiton popup.
 function hide_question_popup() {
   $("#question-modal").modal("hide");
@@ -66,17 +92,4 @@ function show_answer_onclick(categoryIndex, moneyValue) {
   let question = getQuestion(categoryIndex, moneyValue);
   $("#question-modal-show-answer").hide();
   $("#question-modal-text").html(question.answer_text);
-}
-
-// This function is called in main.js, after other parts of the page have loaded.
-// Do not change the name of this function.
-function attachClickHandlers() {
-  $(".question-cell").each((index, questionElement) => {
-    // categoryIndex is used to look up the jeopardy question for this element.
-    let categoryIndex = $(questionElement).attr("data-category");
-    let moneyValue = $(questionElement).text().replace("$", "");
-    $(questionElement).click(() => {
-      show_question_onclick(categoryIndex, moneyValue);
-    });
-  });
 }
