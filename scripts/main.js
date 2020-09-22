@@ -4,15 +4,20 @@ $(function() {
     renderQuestions();
     resizeFunction();
     attachClickHandlers();
+    attachScoringClickHandler();
+    renderScoringButtons();
 });
 
-// function attachClickHandlers() {
-//     $('.question-cell').each((index, question) => {
-//         let categoryIndex = $(question).attr("data-category");
-//         let value = $(question).text().replace("$", '');
-//         $(question).click(() => show_question_onclick(categoryIndex, value));
-//     });
-// }
+function attachScoringClickHandler() {
+    $(".question-cell").each((index, questionElement) => {
+        $(questionElement).click(() => {
+            currentQuestion = {
+                value: parseInt($(questionElement).text().replace("$", "")),
+                element: questionElement
+            }
+        });
+      });
+}
 
 function resizeFunction() {
     var textHeight = Math.max.apply(null, ($('.category-cell').map(function() { return $(this).height(); })));

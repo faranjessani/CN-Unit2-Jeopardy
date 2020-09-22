@@ -52,10 +52,10 @@ function attachClickHandlers() {
 *      HINT: One of the helper methods in this file displays the answer. Find it!
 *      Need more help? Ask a volunteer.
 */
-function questionOnClick(categoryIndex, questionValue) {
-  let question = getQuestion(categoryIndex, questionValue);
+function questionOnClick(categoryIndex, moneyValue) {
+  let question = getQuestion(categoryIndex, moneyValue);
   $("#question-modal-title").html(
-    categories[categoryIndex] + " - $" + questionValue
+    categories[categoryIndex] + " - $" + moneyValue
   );
   $("#question-modal-text").html(question.question_text);
   $("#question-modal-show-answer")
