@@ -9,7 +9,7 @@
  *            Your screen should look like {LINK}.
  *      Need more help? Ask a volunteer.
  * 
- * 3. Finish show_question_onclick().
+ * 3. Finish questionOnClick().
  *      HINT: It looks like the previous engineer also forgot to add a click handler for displaying the answer in the jeopardy box.
  * 
  * 4. Check to make sure that your code change works.
@@ -29,8 +29,8 @@
 /* TODO: Program the following:
 *   Attach a click handler to each question on the Jeopardy board.
 *
-* 1. Call the show_question_onclick helper function when $(questionElement) is clicked.
-*      HINT: The show_question_onclick takes two parameters. 
+* 1. Call the questionOnClick helper function when $(questionElement) is clicked.
+*      HINT: The questionOnClick takes two parameters. 
 *      Find out which ones by looking at the function.
 *      Need more help? Check out https://bit.ly/2RP3RBg or ask a volunteer.
 */
@@ -40,7 +40,7 @@ function attachClickHandlers() {
     let categoryIndex = $(questionElement).attr("data-category");
     let moneyValue = $(questionElement).text().replace("$", "");
     $(questionElement).click(() => {
-      show_question_onclick(categoryIndex, moneyValue);
+      questionOnClick(categoryIndex, moneyValue);
     });
   });
 }
@@ -52,7 +52,7 @@ function attachClickHandlers() {
 *      HINT: One of the helper methods in this file displays the answer. Find it!
 *      Need more help? Ask a volunteer.
 */
-function show_question_onclick(categoryIndex, questionValue) {
+function questionOnClick(categoryIndex, questionValue) {
   let question = getQuestion(categoryIndex, questionValue);
   $("#question-modal-title").html(
     categories[categoryIndex] + " - $" + questionValue
@@ -60,12 +60,12 @@ function show_question_onclick(categoryIndex, questionValue) {
   $("#question-modal-text").html(question.question_text);
   $("#question-modal-show-answer")
     .click(() => {
-      show_answer_onclick(categoryIndex, moneyValue);
+      answerOnClick(categoryIndex, moneyValue);
     })
     .show();
 
   $("#question-modal-close").click(() => {
-    hide_question_popup();
+    hideQuestionPopup();
   });
   $("#question-modal").modal("show");
 }
@@ -83,12 +83,12 @@ function getQuestion(categoryIndex, moneyValue) {
 }
 
 // Hides the quesiton popup.
-function hide_question_popup() {
+function hideQuestionPopup() {
   $("#question-modal").modal("hide");
 }
 
 // This function is the click handler for the "show answer" button.
-function show_answer_onclick(categoryIndex, moneyValue) {
+function answerOnClick(categoryIndex, moneyValue) {
   let question = getQuestion(categoryIndex, moneyValue);
   $("#question-modal-show-answer").hide();
   $("#question-modal-text").html(question.answer_text);
