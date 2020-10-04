@@ -82,7 +82,7 @@ function getQuestion(categoryIndex, moneyValue) {
   );
 }
 
-// Hides the quesiton popup.
+// Hides the question popup.
 function hideQuestionPopup() {
   $("#question-modal").modal("hide");
 }
