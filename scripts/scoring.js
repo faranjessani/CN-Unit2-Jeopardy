@@ -5,6 +5,7 @@ function renderScoringButtons() {
     });
     $("#correct-button").click(() => correctOnClick(currentQuestion.value));
     $("#wrong-button").click(() => wrongOnClick(currentQuestion.value));
+    $("#score").show(); 
 }
 
 function correctOnClick(value) {
